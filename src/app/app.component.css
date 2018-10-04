@@ -1,0 +1,26 @@
+.container{
+    width:100%;
+    height: 100vh;
+}
+
+.settings{
+    font-size: 30px;
+}
+
+.settings .left{
+    margin-left: 10px;
+}
+
+.settings .right{
+    margin-right: 10px;
+}
+
+.letters{
+    font-size: 72px;
+    font-weight: 700;
+}
+
+app-check, app-memo, app-result, app-config{
+    height: 100%;
+    width: 100%;
+}

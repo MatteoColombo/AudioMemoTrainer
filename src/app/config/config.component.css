@@ -1,0 +1,19 @@
+.config-container{
+    height: 100%;
+}
+
+* {
+    font-size:16px;
+}
+
+section{
+    margin:20px;
+}
+
+button{
+    margin:20px;
+}
+
+mat-form-field{
+    margin:20px;
+}

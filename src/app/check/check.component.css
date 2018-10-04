@@ -1,0 +1,18 @@
+.check-container{
+    height: 100%;
+}
+.keyboard{
+    text-align: center;
+    font-size: 18px;
+    border:1px solid #f4f4f4;
+    padding:10px;
+}
+
+.keyboard:hover, .keyboard:focus{
+    background-color: #f4f4f4;
+}
+
+.response{
+    text-align: center;
+    font-size: 30px;
+}

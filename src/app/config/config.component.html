@@ -1,0 +1,12 @@
+<div class="config-container" fxLayout="column">
+  <mat-form-field>
+    <input matInput type="number" [(ngModel)]="seqLength" placeholder="Lunghezza della sequenza">
+  </mat-form-field>
+  <section class="example-section" fxLayout="row wrap" *ngIf="loaded">
+    <mat-checkbox fxFlex="33%" *ngFor="let p of pairs; let i = index" [(ngModel)]="pairs[i].active">{{p.letter}}</mat-checkbox>
+  </section>
+  <div>
+    <button mat-raised-button (click)="save()">Salva</button>
+    <button mat-raised-button (click)="reset()">Resetta</button>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container" fxLayout="column">
+  <div class="settings" fxFlex="50px" fxLayout fxLayoutAlign="start center">
+    <button id="configButton" class="left" (click)="configMenu()" mat-icon-button>
+      <mat-icon>settings</mat-icon>
+    </button>
+    <span fxFlex="grow"></span>
+    <button id="refreshButton" class="right" (click)="start()" mat-icon-button>
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </div>
+  <div class="letters" fxFlex="grow" fxLayout fxLayoutAlign="center center">
+    <app-memo *ngIf="memo" [sequence]="sequence" (finished)="memoFinished($event)"></app-memo>
+    <app-check *ngIf="check" (finished)="checkFinished()" [responses]="responses" [availableLetters]="ls.activeLetters"></app-check>
+    <app-result *ngIf="result" (restart)="start()" [time]="memoTime" [sequence]="sequence" [responses]="responses"></app-result>
+    <app-config *ngIf="config"></app-config>
+  </div>
+</div>

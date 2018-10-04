@@ -1,0 +1,27 @@
+<div class="result-container" fxLayout="column">
+  <div fxFlex="grow" fxLayout="column">
+    <div fxFlex="50%" fxLayout="column">
+      <span class="title">Sequenza</span>
+      <div fxLayout="row wrap">
+        <div *ngFor="let letter of sequence" class="table" mat-button fxFlex.gt-xs="10%" fxFlex.xs="20%">
+          {{letter}}
+        </div>
+      </div>
+      <span fxFlex="grow"></span>
+    </div>
+    <div fxFlex="50%" fxLayout="column">
+      <span class="title">Risposte</span>
+      <div fxLayout="row wrap">
+        <div *ngFor="let letter of responses; let i = index" class="table" mat-button fxFlex.gt-xs="10%" fxFlex.xs="20%">
+          <span style="color:green" *ngIf="responses[i]===sequence[i]">{{letter}}</span>
+          <span style="color:red" *ngIf="responses[i]!==sequence[i]">{{letter}}</span>
+        </div>
+        <span fxFlex="grow"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="time">
+    <span fxFlex="grow">Memo:</span><span>{{time | date:"s"}}.{{time|date:"SSS"}}s</span><span fxFlex="grow"></span>
+  </div>
+</div>

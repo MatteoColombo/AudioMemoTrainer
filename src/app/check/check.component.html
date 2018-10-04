@@ -1,0 +1,13 @@
+<div class="check-container" fxLayout="column">
+    <div fxFlex="grow" class="response" fxLayout fxLayoutAlign="center center">
+       {{stringResponses}}
+    </div>
+    <div fxFlex="noshrink" fxLayout="row wrap">
+        <div *ngFor="let letter of availableLetters" (click)="addLetter(letter)" class="keyboard" mat-button  fxFlex.gt-xs="10%" fxFlex.xs="20%">
+            {{letter}}
+        </div>
+        <div (click)="removeLetter()" class="keyboard" mat-button  fxFlex.gt-xs="10%" fxFlex.xs="20%">
+           <mat-icon>backspace</mat-icon>
+        </div>
+    </div>
+</div>

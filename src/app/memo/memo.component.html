@@ -1,0 +1,4 @@
+<div #container class="container" fxLayout (click)="touch()" fxLayoutAlign="center center">
+    <div *ngIf="index===-1">Inizia</div>
+    <div *ngIf="index>=0">{{sequence[index]}}</div>
+</div>

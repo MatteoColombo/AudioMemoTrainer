@@ -1,0 +1,22 @@
+.result-container{
+    height: 100%;
+}
+.table{
+    text-align: center;
+    font-size: 18px;
+    border:1px solid #f4f4f4;
+    padding:10px;
+}
+
+.table:hover, .table:focus{
+    background-color: #f4f4f4;
+}
+
+.title{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.time{
+    font-size: 24px;
+}
